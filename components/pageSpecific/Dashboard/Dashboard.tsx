@@ -80,7 +80,7 @@ const Dashboard = ({ apartments, destinations }: Props) => {
 					</div>
 
 					<div className={styles.btn}>
-						<Button className="bold">Search</Button>
+						<Button className=" size_15">Search</Button>
 					</div>
 				</form>
 			</div>
