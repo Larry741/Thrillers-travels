@@ -1,0 +1,61 @@
+.input_control {
+	width: 100%;
+	height: max-content;
+	position: relative;
+
+	input[type="password"]::-ms-reveal,
+	input[type="password"]::-ms-clear {
+		display: none;
+	}
+
+	& .label {
+		display: block;
+		margin-bottom: 0.7rem;
+	}
+
+	& .input {
+		height: $input-height;
+		width: 100%;
+		padding: 0 1rem 0 1rem;
+		border-radius: 8px;
+		transition: 0.2s ease;
+		background: white;
+		border: none;
+		outline: 1px solid;
+		outline-color: $color-grey-1;
+		font-size: $input-font-size;
+
+		&:disabled {
+			background-color: $color-input-disabled;
+		}
+	}
+
+	& .searchIcon {
+		position: absolute;
+		left: 0.5rem;
+		top: 1rem;
+		user-select: none;
+	}
+
+	& .searchInput {
+		padding: 0 1rem 0 3rem;
+	}
+
+	& .focusable {
+		&:focus {
+			// border-color: $color-input-error;
+		}
+	}
+
+	& .invalid {
+		outline-color: $color-input-error;
+	}
+
+	& .input_error {
+		color: $color-input-error;
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
+		margin-top: 0.5rem;
+	}
+}
