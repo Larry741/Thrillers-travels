@@ -3,14 +3,22 @@ import Image from "next/image";
 import { hero_img } from "@/helpers/imageImports";
 import { CiLocationOn, CiUser } from "react-icons/ci";
 import { HiMiniCalendar } from "react-icons/hi2";
-
-import styles from "./Dashboard.module.scss";
 import CustomSelectInput from "@/components/Inputs/CustomSelectInput";
 import { InputType } from "@/interface/input";
 import Input from "@/components/Inputs/Input";
 import { Button } from "@/components/Ui/Buttons";
+import { destinationCardsBreakpoints } from "@/utils/swiperBreakpoints";
+import DestinationsContainer from "@/components/Layouts/DestinationsContainer";
+import { DestinationType } from "@/interface/destination";
 
-const Dashboard = () => {
+import styles from "./Dashboard.module.scss";
+import { ApartmentTypes } from "@/interface/apartments";
+interface Props {
+	destinations: DestinationType[];
+	apartments: ApartmentTypes[];
+}
+
+const Dashboard = ({ apartments, destinations }: Props) => {
 	const [destinationInput, setDestinationInput] = useState<InputType>();
 
 	return (
@@ -72,7 +80,11 @@ const Dashboard = () => {
 				</form>
 			</div>
 
-			<div></div>
+			<DestinationsContainer
+				destinations={destinations}
+				heading="Trending destinations"
+				breakpoints={destinationCardsBreakpoints}
+			/>
 		</>
 	);
 };

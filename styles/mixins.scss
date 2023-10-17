@@ -9,3 +9,10 @@
 	max-width: 160rem;
 	width: 100%;
 }
+
+@mixin line-clamp {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+}

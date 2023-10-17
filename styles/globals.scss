@@ -34,3 +34,31 @@ body {
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+.destination-cards-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+
+	& h2 {
+		margin: 0;
+	}
+
+	.destination-swiper {
+		& .swiper-wrapper {
+			padding: 0 0 2.5rem 0;
+		}
+	}
+}
+
+.swiper-pagination-bullet-active {
+	background-color: $color-primary !important;
+}
+
+.ellipses {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

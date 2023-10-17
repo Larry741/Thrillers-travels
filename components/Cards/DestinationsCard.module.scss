@@ -1,0 +1,47 @@
+.destination {
+	display: grid;
+	width: 100%;
+	padding: 2rem 1.5rem;
+	border-radius: 2rem;
+	background-color: white;
+	grid-template-columns: max-content 1fr;
+	gap: 1rem;
+
+	& > img {
+		width: 11rem;
+		height: 11rem;
+		border-radius: 1.5rem;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	&_data {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		width: 100%;
+		overflow: hidden;
+		justify-content: space-between;
+
+		&_loc {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			&_rate {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+
+				& svg {
+					color: orange;
+				}
+			}
+		}
+
+		&_text {
+			@include line-clamp;
+			-webkit-line-clamp: 2;
+		}
+	}
+}
