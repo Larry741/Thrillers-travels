@@ -13,7 +13,7 @@ import { HiMail, HiOutlineMail } from "react-icons/hi";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { RiSettingsFill, RiSettingsLine } from "react-icons/ri";
 import { LiaAngleRightSolid } from "react-icons/lia";
-import Input from "../Inputs/Input";
+import Input from "@/components/Inputs/Input";
 import { InputType } from "@/interface/input";
 import format from "date-fns/format";
 import Image from "next/image";
