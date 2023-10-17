@@ -1,9 +1,10 @@
-import ProfileLayout from "@/components/layouts/ProfileLayout";
+import ProfileLayout from "@/components/Layouts/ProfileLayout";
+import Dashboard from "@/components/pageSpecific/Dashboard/Dashboard";
 
 const IndexPage = () => {
 	return (
 		<ProfileLayout>
-			<div></div>
+			<Dashboard />
 		</ProfileLayout>
 	);
 };

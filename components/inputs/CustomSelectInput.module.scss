@@ -1,0 +1,113 @@
+.input_control {
+	width: 100%;
+	height: max-content;
+	// position: relative;
+
+	& .label {
+		display: block;
+		margin-bottom: 0.7rem;
+	}
+
+	& .dropdownListInput {
+		height: $input-height;
+		width: 100%;
+		padding: 0 3rem 0 1rem;
+		border-radius: 8px;
+		outline: none;
+		transition: 0.2s ease;
+		background: white;
+		position: relative;
+		margin: 0;
+		list-style-type: none;
+		border-color: $color-grey-1;
+		border-style: solid;
+		background-image: url("../../public/images/down_arrow_icon.svg");
+		background-repeat: no-repeat;
+		background-position: 96.5% 50%;
+		border-width: 1px;
+		color: #242424;
+
+		& > *:first-child {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+
+		& .display_list_item {
+			overflow: hidden;
+			width: 100%;
+			text-transform: capitalize;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
+
+	& .invalid {
+		border-color: $color-input-error !important;
+	}
+
+	& .focusable {
+		// border-color: $color-input-error;
+	}
+
+	& .disabled {
+		background-color: $color-input-disabled !important;
+	}
+
+	& .disabled_selection {
+		color: #adb6c5 !important;
+	}
+
+	& .input_error {
+		color: $color-input-error;
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
+		margin-top: 0.5rem;
+	}
+
+	& .empty_list {
+		padding: 1rem 0;
+	}
+}
+
+.dropdown_container {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	border-radius: 0.8rem;
+	background-color: #ffffff;
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+	z-index: 200000;
+	max-height: 30rem;
+	height: max-content;
+	overflow: auto;
+	list-style: none;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	color: #242424;
+
+	& .dropdown_li {
+		width: 100%;
+		padding: 0;
+		user-select: none;
+
+		& span {
+			display: flex;
+			align-items: center;
+			height: 45px;
+			padding-left: 1.3rem;
+			padding-right: 1.3rem;
+			width: 100%;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		& span:hover {
+			background-color: #fafafa;
+		}
+	}
+}
