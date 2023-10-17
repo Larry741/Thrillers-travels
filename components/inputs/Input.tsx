@@ -103,7 +103,7 @@ const Input = React.memo(
 							: ""
 					} ${props.type === "search" ? styles.searchInput : ""} ${
 						className ? className : ""
-					} size_16`}
+					} size_17`}
 					{...props}
 					onBlur={inputBlurHandler}
 					onChange={inputChangeHandler}

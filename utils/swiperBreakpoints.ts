@@ -38,3 +38,10 @@ export const destinationCardsBreakpoints: SwiperBreakpoints = {
 	// 	spaceBetween: 20,
 	// },
 };
+
+export const apartmentOffersCardsBP: SwiperBreakpoints = {
+	280: {
+		slidesPerView: 4,
+		spaceBetween: 20,
+	},
+};

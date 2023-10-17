@@ -16,6 +16,8 @@ import { LiaAngleRightSolid } from "react-icons/lia";
 import Input from "../Inputs/Input";
 import { InputType } from "@/interface/input";
 import format from "date-fns/format";
+import Image from "next/image";
+import { mockProfle_img } from "@/helpers/imageImports";
 
 interface Props {
 	children: ReactNode;
@@ -29,22 +31,26 @@ const ProfileLayout = ({ children }: Props) => {
 		<main className={styles.profile}>
 			<section className={styles.profile_nav}>
 				<div className={styles.profile_nav_header}>
-					<h1>
+					<h1 className="size_28">
 						Mima<span className={styles.colored}>Booking</span>
 					</h1>
 
 					<div className={styles.profile_nav_header_avatar}>
-						<div className={styles.profile_nav_header_avatar_avt}></div>
+						<div className={styles.profile_nav_header_avatar_avt}>
+							<Image alt="Your profile image" src={mockProfle_img} />
+						</div>
 
 						<button className={styles.profile_nav_header_avatar_edit_btn}>
 							<CiEdit size={22} />
 						</button>
 					</div>
 
-					<span className={styles.profile_nav_header_name}>Ilia Jan</span>
+					<span className={`${styles.profile_nav_header_name} size_23 bold`}>
+						Ilia Jan
+					</span>
 				</div>
 
-				<div className={styles.profile_nav_links}>
+				<div className={`${styles.profile_nav_links} size_16 bold`}>
 					<Link
 						className={`${styles.link} ${
 							router.asPath === "/" ? styles.active_link : ""
@@ -111,13 +117,13 @@ const ProfileLayout = ({ children }: Props) => {
 					</Link>
 				</div>
 
-				<div className={styles.profile_nav_logout}>
-					<button className={styles.profile_nav_logout_btn}>
+				<div className={`${styles.profile_nav_logout}`}>
+					<span className={`${styles.profile_nav_logout_btn} size_16 bold`}>
 						<div className={styles.profile_nav_logout_btn_icon}>
-							<LiaAngleRightSolid size={12} />
+							<LiaAngleRightSolid size={11} />
 						</div>
 						Logout
-					</button>
+					</span>
 				</div>
 			</section>
 
@@ -127,13 +133,16 @@ const ProfileLayout = ({ children }: Props) => {
 						<Input
 							type="search"
 							setState={setSearchInput}
+							className="ubuntu"
 							placeholder="Search any thing..."
 							canBeInvalid={false}
 						/>
 					</div>
 
 					<div className={styles.profile_content_nav_not}>
-						<div className="bold">{format(new Date(), "MMMM dd, yyyy")}</div>
+						<div className="bold">
+							{format(new Date(), "EEEE, MMMM dd, yyyy")}
+						</div>
 
 						<div className={styles.profile_content_nav_not_cont}>
 							<IoNotificationsOutline size={22} />

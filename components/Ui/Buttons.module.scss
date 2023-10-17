@@ -11,6 +11,7 @@
 	transition: 0.1s ease-in;
 	min-height: 5rem;
 	width: 11rem;
+	box-shadow: 0px 1px 6px 1px rgba($color-primary, 0.5);
 
 	& > span {
 		display: flex;

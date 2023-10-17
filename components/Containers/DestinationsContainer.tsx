@@ -1,4 +1,4 @@
-// @ Ts-ignore
+// @ts-ignore
 import { Pagination, Navigation, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { LiaAngleRightSolid, LiaAngleLeftSolid } from "react-icons/lia";
@@ -22,7 +22,7 @@ const DestinationsContainer = ({
 	return (
 		<div className={`destination-cards-container`}>
 			<div className={styles.header}>
-				<h2 className="size_25 bold">{heading}</h2>
+				<h2 className="size_25 lighter">{heading}</h2>
 
 				<div className={styles.header_btns}>
 					<button className="dest-prev">

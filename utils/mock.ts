@@ -5,7 +5,8 @@ export const destinations: DestinationType[] = [
 	{
 		city: "Montmarte",
 		country: "France",
-		imageUrl: "/images/montmarte-france.jpg",
+		imageUrl:
+			"https://cdn.contexttravel.com/image/upload/w_1500,q_60/v1558551574/blog/Things%20Didn%27t%20Know%20About%20Montmartre/john-towner-125993-unsplash_1_1024x768.jpg",
 		rating: 4,
 		text: "Visiting the best tourist areas chosen by the audience",
 		amount: 4500000,
@@ -82,7 +83,7 @@ export const apartments: ApartmentTypes[] = [
 		city: "Kensignton",
 		country: "London",
 		rating: 5,
-		imageUrl: "",
+		imageUrl: "/images/hotel 1.jpg",
 		name: "7Seasons Apartments",
 	},
 	{
@@ -90,7 +91,7 @@ export const apartments: ApartmentTypes[] = [
 		city: "Hungary",
 		country: "Budapest",
 		rating: 5,
-		imageUrl: "",
+		imageUrl: "/images/hotel 2.jpg",
 		name: "Along with the villa",
 	},
 	{
@@ -98,7 +99,7 @@ export const apartments: ApartmentTypes[] = [
 		city: "Williamstreet",
 		country: "Boxon",
 		rating: 5,
-		imageUrl: "",
+		imageUrl: "/images/hotel 3.jpg",
 		name: "Resort and Recreation",
 	},
 	{
@@ -106,7 +107,7 @@ export const apartments: ApartmentTypes[] = [
 		city: "Citadines Opera Paris",
 		country: "France",
 		rating: 5,
-		imageUrl: "",
+		imageUrl: "/images/hotel 4.jpg",
 		name: "Beautiful and Classy",
 	},
 	{
@@ -114,7 +115,7 @@ export const apartments: ApartmentTypes[] = [
 		city: "Sugar Apartments",
 		country: "Brazil",
 		rating: 5,
-		imageUrl: "",
+		imageUrl: "/images/hotel 5.jpg",
 		name: "Permanent Peace",
 	},
 ];

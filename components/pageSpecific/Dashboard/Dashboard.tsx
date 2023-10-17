@@ -7,12 +7,17 @@ import CustomSelectInput from "@/components/Inputs/CustomSelectInput";
 import { InputType } from "@/interface/input";
 import Input from "@/components/Inputs/Input";
 import { Button } from "@/components/Ui/Buttons";
-import { destinationCardsBreakpoints } from "@/utils/swiperBreakpoints";
-import DestinationsContainer from "@/components/Layouts/DestinationsContainer";
+import {
+	apartmentOffersCardsBP,
+	destinationCardsBreakpoints,
+} from "@/utils/swiperBreakpoints";
+import DestinationsContainer from "@/components/Containers/DestinationsContainer";
 import { DestinationType } from "@/interface/destination";
+import { ApartmentTypes } from "@/interface/apartments";
+import ApartmentOfferContainer from "@/components/Containers/ApartmentOfferContainer";
+import ExplorePlacesContainer from "@/components/Containers/ExplorePlacesContainer";
 
 import styles from "./Dashboard.module.scss";
-import { ApartmentTypes } from "@/interface/apartments";
 interface Props {
 	destinations: DestinationType[];
 	apartments: ApartmentTypes[];
@@ -82,7 +87,19 @@ const Dashboard = ({ apartments, destinations }: Props) => {
 
 			<DestinationsContainer
 				destinations={destinations}
-				heading="Trending destinations"
+				heading="Trending Destinations"
+				breakpoints={destinationCardsBreakpoints}
+			/>
+
+			<ApartmentOfferContainer
+				apartmentOffers={apartments}
+				breakpoints={apartmentOffersCardsBP}
+				heading="Best Offers"
+			/>
+
+			<ExplorePlacesContainer
+				destinations={destinations}
+				heading="Explore France"
 				breakpoints={destinationCardsBreakpoints}
 			/>
 		</>

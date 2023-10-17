@@ -259,7 +259,7 @@ const CustomSelectInput = ({
 						props.required
 							? `${styles.invalid}`
 							: ""
-					} ${props.className} size_16`}>
+					} size_17 ${props.className} `}>
 					<li
 						className={`${styles.display_list_item} ${
 							enteredValue === SELECT_SELECTIONS.disabled

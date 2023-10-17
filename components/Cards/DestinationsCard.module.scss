@@ -42,6 +42,7 @@
 		&_text {
 			@include line-clamp;
 			-webkit-line-clamp: 2;
+			color: $color-text-disabled;
 		}
 	}
 }

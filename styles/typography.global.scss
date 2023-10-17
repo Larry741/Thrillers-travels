@@ -4,6 +4,9 @@
 .lighter {
 	font-weight: 500;
 }
+.bolder {
+	font-weight: 900;
+}
 
 .size_5-300 {
 	font-size: clamp(5rem, -0.7692rem + 19.2308vw, 30rem);
@@ -51,6 +54,10 @@
 }
 .size_17-24 {
 	font-size: clamp(1.7rem, 1.5385rem + 0.5385vw, 2.4rem);
+}
+
+.size_23 {
+	font-size: 2.3rem;
 }
 
 .size_22 {

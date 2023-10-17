@@ -2,6 +2,7 @@ import { DestinationType } from "@/interface/destination";
 import styles from "./DestinationsCard.module.scss";
 import Image from "next/image";
 import { PiStarFill } from "react-icons/pi";
+import Link from "next/link";
 
 interface Props {
 	destination: DestinationType;
@@ -9,7 +10,7 @@ interface Props {
 
 const DestinationsCard = ({ destination }: Props) => {
 	return (
-		<div className={styles.destination}>
+		<Link href="/" className={styles.destination}>
 			<Image
 				alt={`An image of ${destination.city}`}
 				width={120}
@@ -19,7 +20,7 @@ const DestinationsCard = ({ destination }: Props) => {
 
 			<div className={styles.destination_data}>
 				<div className={styles.destination_data_loc}>
-					<div className="size_20 ellipses bold">
+					<div className="size_20 ellipses bolder">
 						{destination.city}, {destination.country}{" "}
 					</div>
 
@@ -29,7 +30,7 @@ const DestinationsCard = ({ destination }: Props) => {
 					</div>
 				</div>
 
-				<div className={`${styles.destination_data_text} size_14`}>
+				<div className={`${styles.destination_data_text} bold size_14`}>
 					{destination.text}{" "}
 				</div>
 
@@ -37,7 +38,7 @@ const DestinationsCard = ({ destination }: Props) => {
 					${destination.amount.toLocaleString()}
 				</div>
 			</div>
-		</div>
+		</Link>
 	);
 };
 
